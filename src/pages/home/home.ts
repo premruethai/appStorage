@@ -19,4 +19,8 @@ export class HomePage {
     );
   }
 
+  getoGetValue(){
+    this.navCtrl.push(GetvaluePage);
+  }
+
 }
