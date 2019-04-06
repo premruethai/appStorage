@@ -21,6 +21,7 @@ import { GetvaluePage } from '../pages/getvalue/getvalue';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -17,12 +17,18 @@ import {Storage} from '@ionic/storage';
 export class GetvaluePage {
   username:string;
   studentId:string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage:Storage) {
     this.storage.ready().then(
         ()=>{
           this.storage.get('username').then(
-            (val)=>{
-              this.username=val;
+            (valName)=>{
+              this.username=valName;
+            }
+          );
+
+          this.storage.get('studentId').then(
+            (valId)=>{
+              this.studentId=valId;
             }
           );
         }
